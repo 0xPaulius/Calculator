@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="btn_clear">C</string>
+    <string name="btn_backspace">Del</string>
+    <string name="btn_sign">±</string>
+    <string name="btn_sqrt">√</string>
+    <string name="btn_divide">÷</string>
+    <string name="btn_multiply">×</string>
+    <string name="btn_subtract">-</string>
+    <string name="btn_add">+</string>
+    <string name="btn_equals">=</string>
+    <string name="btn_decimal">.</string>
+</resources>
