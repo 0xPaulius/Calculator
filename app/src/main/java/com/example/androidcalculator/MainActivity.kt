@@ -193,9 +193,9 @@ fun calculatorScreen() {
                         },
                         modifier = Modifier.weight(1f),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = when {
-                                button in "0123456789." -> MaterialTheme.colorScheme.tertiary
-                                button in listOf("+", "-", "×", "÷", "=") -> MaterialTheme.colorScheme.primary
+                            containerColor = when (button) {
+                                in "0123456789." -> MaterialTheme.colorScheme.tertiary
+                                in listOf("+", "-", "×", "÷", "=") -> MaterialTheme.colorScheme.primary
                                 else -> MaterialTheme.colorScheme.secondary
                             }
                         )
@@ -206,5 +206,20 @@ fun calculatorScreen() {
             }
             Spacer(modifier = Modifier.height(8.dp))
         }
+    }
+}
+class Calculator {
+    fun calculate(num1: Double, num2: Double, operation: String): String {
+        return when (operation) {
+            "+" -> (num1 + num2).toString()
+            "-" -> (num1 - num2).toString()
+            "×" -> (num1 * num2).toString()
+            "÷" -> if (num2 != 0.0) (num1 / num2).toString() else "Error"
+            else -> "Error"
+        }
+    }
+
+    fun sqrt(number: Double): String {
+        return if (number >= 0) kotlin.math.sqrt(number).toString() else "Error"
     }
 }
